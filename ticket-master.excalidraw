@@ -9,7 +9,7 @@
       "x": -1632.8681640625,
       "y": -839.5654296875,
       "width": 911.1987915039062,
-      "height": 1140,
+      "height": 1180,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -23,28 +23,28 @@
       "index": "aq",
       "roundness": null,
       "seed": 632723496,
-      "version": 1407,
-      "versionNonce": 1709671464,
+      "version": 1455,
+      "versionNonce": 845698392,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778226279046,
+      "updated": 1778237048097,
       "link": null,
       "locked": false,
-      "text": "Functional Requirements:\n________________________________\n\nCore requirements: \n- view events\n- Book tickets\n- search for events\n------------------------------\n\nBelow the line:\n- should be able to view booked tickets\n- Admins or events coordinators should be able to add eventas\n- popular events should have dynamic pricing\n---------------------------------------------------------------------------------\n\n \nNon-Functional Requirements:\n________________________________\n\nCore requirements: \n----------------------------\n- Strong consistency for booking and high availability for view and search (No double booking)\n- read >>> write(100: 1)\n- should be scalable and capable of handling extremely high throughput during popular events\n(10 million users, one event)\n------------------------------------------------------------------------------------------\n\nBelow the line:\n- Should protect user data\n- Fault Tolerance\n-------------------------------------------\n\n\nCore Entities:\nEvent\nPerformer\nVenue\nTicket\nBooking\n___________________\n\nAPI design\n\nView Event:  GET /events/:eventId -> Response: event, venue, Tickets[]\n\nSearch: GET /search?term={term}&location={location}&type={type}&date={date} ->Partial<Event>\n\nbooking: POST /booking/reserve\n            body: {\n                ticketId\n            }\nbooking: POST /booking/confirm\n             body: {\n                ticketId\n                paymentDetails\n             }\n_____________________________________________________________________________________",
+      "text": "Functional Requirements:\n________________________________\n\nCore requirements: \n- view events\n- Book tickets\n- search for events\n------------------------------\n\nBelow the line:\n- should be able to view booked tickets\n- Admins or events coordinators should be able to add events\n- popular events should have dynamic pricing\n---------------------------------------------------------------------------------\n\n \nNon-Functional Requirements:\n________________________________\n\nCore requirements: \n----------------------------\n- Strong consistency for booking and high availability for view and search (No double booking) \n- read >>> write(100: 1)\n- should be scalable and capable of handling extremely high throughput during popular events\n(10 million users, one event)\n------------------------------------------------------------------------------------------\n\nBelow the line:\n- Should protect user data\n- Fault Tolerance\n-------------------------------------------\n\n\nCore Entities:\nEvent\nPerformer\nVenue\nTicket\nBooking\n___________________\n\nAPI design\n\nView Event:  GET /events/:eventId -> Response: event, venue, Tickets[]\n\nSearch: GET /search?term={term}&location={location}&type={type}&date={date} ->Partial<Event>\n\nbooking: POST /booking/reserve\n            Headers: JWT | session Token\n            body: {\n                ticketId\n            }\nbooking: POST /booking/confirm\n             Headers: JWT | session Token\n             body: {\n                ticketId\n                paymentDetails (Stripe)\n             }\n_____________________________________________________________________________________",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Functional Requirements:\n________________________________\n\nCore requirements: \n- view events\n- Book tickets\n- search for events\n------------------------------\n\nBelow the line:\n- should be able to view booked tickets\n- Admins or events coordinators should be able to add eventas\n- popular events should have dynamic pricing\n---------------------------------------------------------------------------------\n\n \nNon-Functional Requirements:\n________________________________\n\nCore requirements: \n----------------------------\n- Strong consistency for booking and high availability for view and search (No double booking)\n- read >>> write(100: 1)\n- should be scalable and capable of handling extremely high throughput during popular events\n(10 million users, one event)\n------------------------------------------------------------------------------------------\n\nBelow the line:\n- Should protect user data\n- Fault Tolerance\n-------------------------------------------\n\n\nCore Entities:\nEvent\nPerformer\nVenue\nTicket\nBooking\n___________________\n\nAPI design\n\nView Event:  GET /events/:eventId -> Response: event, venue, Tickets[]\n\nSearch: GET /search?term={term}&location={location}&type={type}&date={date} ->Partial<Event>\n\nbooking: POST /booking/reserve\n            body: {\n                ticketId\n            }\nbooking: POST /booking/confirm\n             body: {\n                ticketId\n                paymentDetails\n             }\n_____________________________________________________________________________________",
+      "originalText": "Functional Requirements:\n________________________________\n\nCore requirements: \n- view events\n- Book tickets\n- search for events\n------------------------------\n\nBelow the line:\n- should be able to view booked tickets\n- Admins or events coordinators should be able to add events\n- popular events should have dynamic pricing\n---------------------------------------------------------------------------------\n\n \nNon-Functional Requirements:\n________________________________\n\nCore requirements: \n----------------------------\n- Strong consistency for booking and high availability for view and search (No double booking) \n- read >>> write(100: 1)\n- should be scalable and capable of handling extremely high throughput during popular events\n(10 million users, one event)\n------------------------------------------------------------------------------------------\n\nBelow the line:\n- Should protect user data\n- Fault Tolerance\n-------------------------------------------\n\n\nCore Entities:\nEvent\nPerformer\nVenue\nTicket\nBooking\n___________________\n\nAPI design\n\nView Event:  GET /events/:eventId -> Response: event, venue, Tickets[]\n\nSearch: GET /search?term={term}&location={location}&type={type}&date={date} ->Partial<Event>\n\nbooking: POST /booking/reserve\n            Headers: JWT | session Token\n            body: {\n                ticketId\n            }\nbooking: POST /booking/confirm\n             Headers: JWT | session Token\n             body: {\n                ticketId\n                paymentDetails (Stripe)\n             }\n_____________________________________________________________________________________",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "id": "OWBPnOiO6L_QN5XtfQO3f",
       "type": "rectangle",
-      "x": -2239.6015625,
-      "y": 668.27734375,
+      "x": -2332.440743817574,
+      "y": 642.3942773514175,
       "width": 149.625,
       "height": 56.140625,
       "angle": 0,
@@ -62,8 +62,8 @@
         "type": 3
       },
       "seed": 1598339160,
-      "version": 361,
-      "versionNonce": 1902215976,
+      "version": 487,
+      "versionNonce": 261448488,
       "isDeleted": false,
       "boundElements": [
         {
@@ -71,15 +71,15 @@
           "id": "fnl0r21dDOXL2VfeM2nqM"
         }
       ],
-      "updated": 1778231592151,
+      "updated": 1778245563880,
       "link": null,
       "locked": false
     },
     {
       "id": "fnl0r21dDOXL2VfeM2nqM",
       "type": "text",
-      "x": -2186.501045227051,
-      "y": 686.34765625,
+      "x": -2279.340226544625,
+      "y": 660.4645898514175,
       "width": 43.42396545410156,
       "height": 20,
       "angle": 0,
@@ -95,11 +95,11 @@
       "index": "aw",
       "roundness": null,
       "seed": 180377128,
-      "version": 291,
-      "versionNonce": 597089832,
+      "version": 417,
+      "versionNonce": 273595944,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778231592151,
+      "updated": 1778245563880,
       "link": null,
       "locked": false,
       "text": "Client",
@@ -115,9 +115,9 @@
     {
       "id": "cu0RzyZCw-2BhdRx2jVHg",
       "type": "rectangle",
-      "x": -1802.2899865944225,
-      "y": 507.3043324442758,
-      "width": 244.64843750000009,
+      "x": -1960.8729854856574,
+      "y": 502.1546591055668,
+      "width": 310.21092854765027,
       "height": 344.08203125,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -134,8 +134,8 @@
         "type": 3
       },
       "seed": 1110536792,
-      "version": 936,
-      "versionNonce": 1868057688,
+      "version": 1096,
+      "versionNonce": 1173298728,
       "isDeleted": false,
       "boundElements": [
         {
@@ -145,59 +145,58 @@
         {
           "id": "eCWGdyXvNmD9oAq5J7abF",
           "type": "arrow"
-        }
-      ],
-      "updated": 1778234565871,
-      "link": null,
-      "locked": false
-    },
-    {
-      "id": "x3BWrqMyK_HR1-CdWvNGJ",
-      "type": "text",
-      "x": -1742.75390625,
-      "y": 564.7734375,
-      "width": 158.8478546142578,
-      "height": 200,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "ay",
-      "roundness": null,
-      "seed": 1866472792,
-      "version": 306,
-      "versionNonce": 1670527272,
-      "isDeleted": false,
-      "boundElements": [
+        },
+        {
+          "type": "text",
+          "id": "Ui-gzYtfh-W-dYGCb2IFr"
+        },
         {
           "id": "G_3QPW7-JvSBwdDRwAVxE",
           "type": "arrow"
         },
         {
-          "id": "i91XjwI7JmkyjH8QKvLSg",
-          "type": "arrow"
-        },
-        {
-          "id": "F1H8ZUaBfLQUI_-TgQfkH",
+          "id": "CQyi1Wbzvz_wZrGfsz-HH",
           "type": "arrow"
         }
       ],
-      "updated": 1778234456923,
+      "updated": 1778245569140,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "Ui-gzYtfh-W-dYGCb2IFr",
+      "type": "text",
+      "x": -1939.8974345419103,
+      "y": 599.1956747305668,
+      "width": 268.25982666015625,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "axV",
+      "roundness": null,
+      "seed": 930579288,
+      "version": 180,
+      "versionNonce": 1592739112,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778245569141,
       "link": null,
       "locked": false,
-      "text": "APIGateway\n-----------------\nParameter validation\nAllow-list/Deny-List\nAuthentication\nRate limiting\nRouting\nLogging\n\n",
-      "fontSize": 16,
+      "text": "API Gateway\n1. Validate the request\n2. Run middleware\n    - auth, rate limiting,\n3. Route to correct service\n4. Transform the response",
+      "fontSize": 20,
       "fontFamily": 5,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "APIGateway\n-----------------\nParameter validation\nAllow-list/Deny-List\nAuthentication\nRate limiting\nRouting\nLogging\n\n",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "cu0RzyZCw-2BhdRx2jVHg",
+      "originalText": "API Gateway\n1. Validate the request\n2. Run middleware\n    - auth, rate limiting,\n3. Route to correct service\n4. Transform the response",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -249,7 +248,7 @@
       "type": "text",
       "x": -1264.29296875,
       "y": 658.68359375,
-      "width": 104.7999267578125,
+      "width": 157.19989013671875,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -264,28 +263,28 @@
       "index": "b02",
       "roundness": null,
       "seed": 1124266792,
-      "version": 113,
-      "versionNonce": 2056940376,
+      "version": 120,
+      "versionNonce": 219209512,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778226951762,
+      "updated": 1778237159130,
       "link": null,
       "locked": false,
-      "text": "Event service",
+      "text": "Event CRUD service",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Event service",
+      "originalText": "Event CRUD service",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "id": "56FlMNDg49rxV8bc8RlpR",
       "type": "ellipse",
-      "x": -843.67578125,
-      "y": 573.4453125,
+      "x": -812.9953330489582,
+      "y": 579.4135455847012,
       "width": 285.3046875,
       "height": 174.1640625,
       "angle": 0,
@@ -303,8 +302,8 @@
         "type": 2
       },
       "seed": 1914894632,
-      "version": 212,
-      "versionNonce": 1352761896,
+      "version": 243,
+      "versionNonce": 437777192,
       "isDeleted": false,
       "boundElements": [
         {
@@ -318,17 +317,21 @@
         {
           "id": "l11X39wUtQivyhT-m-H_P",
           "type": "arrow"
+        },
+        {
+          "id": "BdMNJmrOalZCMFCB6iJ2D",
+          "type": "arrow"
         }
       ],
-      "updated": 1778234806139,
+      "updated": 1778237640982,
       "link": null,
       "locked": false
     },
     {
       "id": "qlFoUf4oqd6xbpi-vzLaL",
       "type": "text",
-      "x": -781.25,
-      "y": 621.75,
+      "x": -727.4996369324872,
+      "y": 634.6863524414052,
       "width": 123.48789978027344,
       "height": 40,
       "angle": 0,
@@ -344,11 +347,11 @@
       "index": "b04",
       "roundness": null,
       "seed": 1126580776,
-      "version": 25,
-      "versionNonce": 2031503912,
+      "version": 60,
+      "versionNonce": 429632856,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778226967785,
+      "updated": 1778238467394,
       "link": null,
       "locked": false,
       "text": "Database\n(Postgress DB)",
@@ -364,9 +367,9 @@
     {
       "id": "ogF9KpcyK47P0yEARhEwN",
       "type": "text",
-      "x": -505.12890625,
-      "y": 545.765625,
-      "width": 113.90391540527344,
+      "x": -501.6267139190468,
+      "y": 592.4442535530881,
+      "width": 125.00788879394531,
       "height": 200,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -381,28 +384,28 @@
       "index": "b08",
       "roundness": null,
       "seed": 590399528,
-      "version": 151,
-      "versionNonce": 51588904,
+      "version": 316,
+      "versionNonce": 336895272,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778232987211,
+      "updated": 1778237645713,
       "link": null,
       "locked": false,
-      "text": "Event:\n- id\n- VenueId\n- PerformerId \n- tickets[]\n- name\n- Date\n- Description\n\n",
+      "text": "Event:\n- id (PK)\n- VenueId(FK)\n- PerformerId \n- tickets[] (1:N)\n- name\n- Date\n- Description\n\n",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Event:\n- id\n- VenueId\n- PerformerId \n- tickets[]\n- name\n- Date\n- Description\n\n",
+      "originalText": "Event:\n- id (PK)\n- VenueId(FK)\n- PerformerId \n- tickets[] (1:N)\n- name\n- Date\n- Description\n\n",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "id": "lj3GaOolcUGR_OTwfL8Rj",
       "type": "text",
-      "x": -364.8125,
-      "y": 547.4921875,
+      "x": -299.4468777520185,
+      "y": 589.425241829489,
       "width": 140.81588745117188,
       "height": 80,
       "angle": 0,
@@ -418,11 +421,11 @@
       "index": "b09",
       "roundness": null,
       "seed": 1166027816,
-      "version": 87,
-      "versionNonce": 1788127528,
+      "version": 242,
+      "versionNonce": 1317134632,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778232945853,
+      "updated": 1778237649133,
       "link": null,
       "locked": false,
       "text": "Performer:\n- id\n- Name\n- brief description",
@@ -438,8 +441,8 @@
     {
       "id": "9CsphharS2ZGBHLDwPzLo",
       "type": "text",
-      "x": -184.26171875,
-      "y": 548.08203125,
+      "x": -79.38763686318907,
+      "y": 577.3066864850689,
       "width": 428.255615234375,
       "height": 100,
       "angle": 0,
@@ -455,11 +458,11 @@
       "index": "b0B",
       "roundness": null,
       "seed": 694959960,
-      "version": 171,
-      "versionNonce": 1733460056,
+      "version": 258,
+      "versionNonce": 1953482024,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778232935757,
+      "updated": 1778237650503,
       "link": null,
       "locked": false,
       "text": "Venue:\n- id\n- Address\n- Capacity\n- seatMap(Providing a alyout of seating arrangements)",
@@ -494,8 +497,8 @@
         "type": 3
       },
       "seed": 1096232024,
-      "version": 242,
-      "versionNonce": 2142294104,
+      "version": 243,
+      "versionNonce": 628478504,
       "isDeleted": false,
       "boundElements": [
         {
@@ -509,9 +512,13 @@
         {
           "id": "e5cChBYAKw9_g4rlNZ7tv",
           "type": "arrow"
+        },
+        {
+          "id": "BdMNJmrOalZCMFCB6iJ2D",
+          "type": "arrow"
         }
       ],
-      "updated": 1778234990796,
+      "updated": 1778237539144,
       "link": null,
       "locked": false
     },
@@ -555,10 +562,10 @@
     {
       "id": "lFMkk5W6fh8ULAmcFt0Ct",
       "type": "arrow",
-      "x": -2089.939704120081,
-      "y": 697.3961126697498,
-      "width": 287.9976822553507,
-      "height": 0.4246915715251589,
+      "x": -2179.167897191095,
+      "y": 671.3938888397887,
+      "width": 216.02141294480123,
+      "height": 0.9948360892458368,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "#ffffff",
@@ -574,8 +581,8 @@
         "type": 2
       },
       "seed": 354163544,
-      "version": 1994,
-      "versionNonce": 735091496,
+      "version": 2139,
+      "versionNonce": 1771291736,
       "isDeleted": false,
       "boundElements": [
         {
@@ -583,7 +590,7 @@
           "id": "WiWpyQYXdIw291L2K0uju"
         }
       ],
-      "updated": 1778231594271,
+      "updated": 1778245565963,
       "link": null,
       "locked": false,
       "points": [
@@ -592,8 +599,8 @@
           0
         ],
         [
-          287.9976822553507,
-          0.4246915715251589
+          216.02141294480123,
+          -0.9948360892458368
         ]
       ],
       "lastCommittedPoint": null,
@@ -643,10 +650,10 @@
     {
       "id": "Q0G8_Gjc17mQwa2CaqF-A",
       "type": "arrow",
-      "x": -1557.0611728772633,
-      "y": 667.8059582852896,
-      "width": 237.45653971464913,
-      "height": 0.8868726625026966,
+      "x": -1649.9922189536162,
+      "y": 664.0154848691997,
+      "width": 330.38758579100227,
+      "height": 3.971262249330607,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "#ffffff",
@@ -662,11 +669,11 @@
         "type": 2
       },
       "seed": 2120746072,
-      "version": 2371,
-      "versionNonce": 876413272,
+      "version": 2524,
+      "versionNonce": 1773738280,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1778234565871,
+      "updated": 1778245569140,
       "link": null,
       "locked": false,
       "points": [
@@ -675,8 +682,8 @@
           0
         ],
         [
-          237.45653971464913,
-          0.8868726625026966
+          330.38758579100227,
+          3.971262249330607
         ]
       ],
       "lastCommittedPoint": null,
@@ -697,10 +704,10 @@
     {
       "id": "FUvMk_RkNo97U2gZlEhLB",
       "type": "arrow",
-      "x": -1082.000835587386,
-      "y": 662.6633701449136,
-      "width": 236.35708250127402,
-      "height": 0.11895242547268481,
+      "x": -1082.0008355873858,
+      "y": 663.9848966237428,
+      "width": 267.00210626252874,
+      "height": 2.910605958137353,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "#ffffff",
@@ -716,11 +723,11 @@
         "type": 2
       },
       "seed": 1162429272,
-      "version": 2172,
-      "versionNonce": 352133208,
+      "version": 2202,
+      "versionNonce": 1275022888,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1778231647134,
+      "updated": 1778237640983,
       "link": null,
       "locked": false,
       "points": [
@@ -729,8 +736,8 @@
           0
         ],
         [
-          236.35708250127402,
-          -0.11895242547268481
+          267.00210626252874,
+          2.910605958137353
         ]
       ],
       "lastCommittedPoint": null,
@@ -751,8 +758,8 @@
     {
       "id": "czmKq2u_SdVKGKnG-Bvqq",
       "type": "text",
-      "x": -1451.25,
-      "y": 650.75,
+      "x": -1524.4023013506774,
+      "y": 640.6008953012764,
       "width": 74.44795227050781,
       "height": 20,
       "angle": 0,
@@ -768,11 +775,11 @@
       "index": "b0M",
       "roundness": null,
       "seed": 136568664,
-      "version": 11,
-      "versionNonce": 1728385368,
+      "version": 89,
+      "versionNonce": 944244824,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778231656773,
+      "updated": 1778245534410,
       "link": null,
       "locked": false,
       "text": "/:eventId",
@@ -788,8 +795,8 @@
     {
       "id": "6npuRkeK8JdGnMJ0KEIVK",
       "type": "text",
-      "x": -1475.1171875,
-      "y": 678.265625,
+      "x": -1534.685541673519,
+      "y": 672.0849808419717,
       "width": 106.71992492675781,
       "height": 20,
       "angle": 0,
@@ -805,11 +812,11 @@
       "index": "b0N",
       "roundness": null,
       "seed": 923427112,
-      "version": 52,
-      "versionNonce": 2040473944,
+      "version": 78,
+      "versionNonce": 985874264,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778232177962,
+      "updated": 1778245535710,
       "link": null,
       "locked": false,
       "text": "view(eventId)",
@@ -825,10 +832,10 @@
     {
       "id": "G_3QPW7-JvSBwdDRwAVxE",
       "type": "arrow",
-      "x": -1556.0009173385358,
-      "y": 562.6895218409775,
-      "width": 208.07012560215003,
-      "height": 144.44542497571894,
+      "x": -1647.958814416128,
+      "y": 579.0565043698674,
+      "width": 301.64496375723866,
+      "height": 141.327163774599,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "#ffffff",
@@ -844,11 +851,11 @@
         "type": 2
       },
       "seed": 5980968,
-      "version": 2537,
-      "versionNonce": 868915800,
+      "version": 2855,
+      "versionNonce": 676523816,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1778234990796,
+      "updated": 1778245569141,
       "link": null,
       "locked": false,
       "points": [
@@ -857,20 +864,20 @@
           0
         ],
         [
-          208.07012560215003,
-          -144.44542497571894
+          301.64496375723866,
+          -141.327163774599
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "elementId": "x3BWrqMyK_HR1-CdWvNGJ",
-        "focus": -0.17596472018055123,
-        "gap": 27.905134297206587
+        "elementId": "cu0RzyZCw-2BhdRx2jVHg",
+        "focus": -0.08672229369678076,
+        "gap": 4.031519782769237
       },
       "endBinding": {
         "elementId": "8XPrMwf9Pq8ePsl735pht",
-        "focus": 0.5706187390233937,
-        "gap": 1
+        "focus": 0.2485139627077115,
+        "gap": 1.3017346861763088
       },
       "startArrowhead": "arrow",
       "endArrowhead": "arrow",
@@ -935,8 +942,8 @@
         "type": 3
       },
       "seed": 1641027112,
-      "version": 372,
-      "versionNonce": 2106913368,
+      "version": 374,
+      "versionNonce": 876488488,
       "isDeleted": false,
       "boundElements": [
         {
@@ -960,15 +967,15 @@
           "type": "arrow"
         },
         {
-          "id": "F1H8ZUaBfLQUI_-TgQfkH",
+          "id": "wdoRNGZ4cB7thPc-0utJt",
           "type": "arrow"
         },
         {
-          "id": "wdoRNGZ4cB7thPc-0utJt",
+          "id": "CQyi1Wbzvz_wZrGfsz-HH",
           "type": "arrow"
         }
       ],
-      "updated": 1778234587142,
+      "updated": 1778245499703,
       "link": null,
       "locked": false
     },
@@ -1012,11 +1019,11 @@
     {
       "id": "NPvGKwj6SVbDVfhlnAES8",
       "type": "text",
-      "x": -1427.8518621043304,
-      "y": 819.0940212502449,
+      "x": -1324.6148997095038,
+      "y": 820.0576422170456,
       "width": 195.9518280029297,
       "height": 60,
-      "angle": 0.5184978651544885,
+      "angle": 0.3266480456805887,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
@@ -1029,11 +1036,11 @@
       "index": "b0Z",
       "roundness": null,
       "seed": 1693582168,
-      "version": 678,
-      "versionNonce": 869353768,
+      "version": 799,
+      "versionNonce": 739001432,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778234495040,
+      "updated": 1778245519810,
       "link": null,
       "locked": false,
       "text": "/booking/reserve\nreserve(ticketId, userId)\n",
@@ -1393,8 +1400,8 @@
     {
       "id": "YDbDYwyedjK3lImZWCAaE",
       "type": "text",
-      "x": -524.4550004796183,
-      "y": 753.2752959238533,
+      "x": -325.4102824985257,
+      "y": 763.450304412007,
       "width": 206.19178771972656,
       "height": 140,
       "angle": 0,
@@ -1410,30 +1417,30 @@
       "index": "b0o",
       "roundness": null,
       "seed": 827548968,
-      "version": 115,
-      "versionNonce": 2036782120,
+      "version": 385,
+      "versionNonce": 668728360,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778233203286,
+      "updated": 1778237665303,
       "link": null,
       "locked": false,
-      "text": "Ticket:\n- id\n- eventId\n- seat\n- price\n- status: available, booked\n- bookingId",
+      "text": "Ticket:\n- id (PK)\n- eventId (FK)\n- seat\n- price\n- status: available, booked\n- bookingId",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Ticket:\n- id\n- eventId\n- seat\n- price\n- status: available, booked\n- bookingId",
+      "originalText": "Ticket:\n- id (PK)\n- eventId (FK)\n- seat\n- price\n- status: available, booked\n- bookingId",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "id": "DYvT77f65YVDfu84z1Zqx",
       "type": "text",
-      "x": -293.67478944430377,
-      "y": 747.3376680364834,
-      "width": 259.87176513671875,
-      "height": 100,
+      "x": -63.315210360444496,
+      "y": 774.3397781384474,
+      "width": 79.46075747618308,
+      "height": 81.33145477670836,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -1447,20 +1454,20 @@
       "index": "b0p",
       "roundness": null,
       "seed": 2097277224,
-      "version": 134,
-      "versionNonce": 806965336,
+      "version": 289,
+      "versionNonce": 584066856,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778233774129,
+      "updated": 1778237662993,
       "link": null,
       "locked": false,
-      "text": "Booking:\n- id\n- userId\n- ticketId\n- bookingStatus: inProgress, Sold",
-      "fontSize": 16,
+      "text": "Booking:\n- id\n- userId\n- ticketId",
+      "fontSize": 16.266290955341677,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Booking:\n- id\n- userId\n- ticketId\n- bookingStatus: inProgress, Sold",
+      "originalText": "Booking:\n- id\n- userId\n- ticketId",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -1504,8 +1511,8 @@
     {
       "id": "Q6jhNGzgz2GULdl0lVSe0",
       "type": "arrow",
-      "x": -877.2197264023358,
-      "y": 998.3798527555539,
+      "x": -877.3855106546886,
+      "y": 998.5456370079067,
       "width": 209.4954454674264,
       "height": 7.353826275400252,
       "angle": 0,
@@ -1521,11 +1528,11 @@
       "index": "b0s",
       "roundness": null,
       "seed": 1316087592,
-      "version": 142,
-      "versionNonce": 604527912,
+      "version": 145,
+      "versionNonce": 502697304,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778233550413,
+      "updated": 1778244762710,
       "link": null,
       "locked": false,
       "points": [
@@ -1541,13 +1548,13 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "54-ZrCj8ScWu0PJURZR0w",
-        "focus": 0.06114690077025673,
-        "gap": 4.952029736022041
+        "focus": 0.06381809117077643,
+        "gap": 4.366848921895439
       },
       "endBinding": {
         "elementId": "_hdqFHKB_aY6YRCmO6v_0",
-        "focus": 0.13871601057378732,
-        "gap": 4.732985764840543
+        "focus": 0.13569843711218413,
+        "gap": 4.876795511462313
       },
       "startArrowhead": "arrow",
       "endArrowhead": "arrow",
@@ -1556,11 +1563,11 @@
     {
       "id": "cDmZXzVhqhYy7KMPSzm7W",
       "type": "text",
-      "x": -1532.120907549078,
-      "y": 870.531427209758,
+      "x": -1543.404598224841,
+      "y": 836.9912006556301,
       "width": 324.2686087900193,
       "height": 39.44109373124957,
-      "angle": 0.50700100863458,
+      "angle": 0.3053760648696642,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
@@ -1573,11 +1580,11 @@
       "index": "b0t",
       "roundness": null,
       "seed": 1067629400,
-      "version": 537,
-      "versionNonce": 140966184,
+      "version": 699,
+      "versionNonce": 1563810088,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778234600701,
+      "updated": 1778245529111,
       "link": null,
       "locked": false,
       "text": "/booking/confirm\nConfirm(ticketId, UserId, paymentDetails)",
@@ -1591,64 +1598,12 @@
       "lineHeight": 1.25
     },
     {
-      "id": "F1H8ZUaBfLQUI_-TgQfkH",
-      "type": "arrow",
-      "x": -1565.066355954971,
-      "y": 751.2800606418625,
-      "width": 389.22112360881647,
-      "height": 214.75222158631107,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "solid",
-      "strokeWidth": 4,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "index": "b0u",
-      "roundness": null,
-      "seed": 838125352,
-      "version": 292,
-      "versionNonce": 1342960728,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1778234598543,
-      "link": null,
-      "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          389.22112360881647,
-          214.75222158631107
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": {
-        "elementId": "x3BWrqMyK_HR1-CdWvNGJ",
-        "focus": 0.22451220360309976,
-        "gap": 18.83969568077123
-      },
-      "endBinding": {
-        "elementId": "54-ZrCj8ScWu0PJURZR0w",
-        "focus": -0.32523691534238286,
-        "gap": 2.3572670001159266
-      },
-      "startArrowhead": "arrow",
-      "endArrowhead": "arrow",
-      "elbowed": false
-    },
-    {
       "id": "Q0HyCPJ0bRCl81Dsy4kqw",
       "type": "arrow",
-      "x": -879.4866857774591,
-      "y": 963.7846376635215,
-      "width": 196.1761003313918,
-      "height": 218.57441929518484,
+      "x": -879.5126351199646,
+      "y": 971.8286037521304,
+      "width": 217.7521394563829,
+      "height": 216.50133983457442,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -1662,11 +1617,11 @@
       "index": "b0x",
       "roundness": null,
       "seed": 99495256,
-      "version": 104,
-      "versionNonce": 1021602600,
+      "version": 138,
+      "versionNonce": 1542617432,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778233575574,
+      "updated": 1778238455736,
       "link": null,
       "locked": false,
       "points": [
@@ -1675,22 +1630,22 @@
           0
         ],
         [
-          196.1761003313918,
-          -218.57441929518484
+          217.7521394563829,
+          -216.50133983457442
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "54-ZrCj8ScWu0PJURZR0w",
-        "focus": 0.5794343901091586,
-        "gap": 2.4386118873422014
+        "focus": 0.5807198300169737,
+        "gap": 2.239724456619456
       },
       "endBinding": {
         "elementId": "56FlMNDg49rxV8bc8RlpR",
-        "focus": -0.42442641409444304,
-        "gap": 1.7201977924584313
+        "focus": -0.42533210538256855,
+        "gap": 1.9061235791051572
       },
-      "startArrowhead": "arrow",
+      "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false
     },
@@ -1873,10 +1828,10 @@
     {
       "id": "eCWGdyXvNmD9oAq5J7abF",
       "type": "arrow",
-      "x": -1620.196934909751,
-      "y": 854.2970818646198,
-      "width": 6.158211062427199,
-      "height": 106.56888993600512,
+      "x": -1667.1961931729008,
+      "y": 846.5541768498103,
+      "width": 39.12403600689072,
+      "height": 115.48601741104233,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -1890,11 +1845,11 @@
       "index": "b16",
       "roundness": null,
       "seed": 1009496616,
-      "version": 420,
-      "versionNonce": 1695457576,
+      "version": 573,
+      "versionNonce": 411808808,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778234624535,
+      "updated": 1778245569141,
       "link": null,
       "locked": false,
       "points": [
@@ -1903,8 +1858,8 @@
           0
         ],
         [
-          6.158211062427199,
-          106.56888993600512
+          39.12403600689072,
+          115.48601741104233
         ]
       ],
       "lastCommittedPoint": null,
@@ -1977,8 +1932,8 @@
     {
       "id": "l8Lmv_c91M_k3kmNpgAgc",
       "type": "ellipse",
-      "x": -805.1521520336444,
-      "y": 355.5143249183237,
+      "x": -469.06084569352424,
+      "y": 375.7710882526827,
       "width": 204.5236358936961,
       "height": 83.81791107808476,
       "angle": 0,
@@ -1996,8 +1951,8 @@
         "type": 2
       },
       "seed": 1130297944,
-      "version": 64,
-      "versionNonce": 864054312,
+      "version": 352,
+      "versionNonce": 1738925352,
       "isDeleted": false,
       "boundElements": [
         {
@@ -2013,15 +1968,15 @@
           "type": "arrow"
         }
       ],
-      "updated": 1778234806139,
+      "updated": 1778237633933,
       "link": null,
       "locked": false
     },
     {
       "id": "BLBknxOYIhatLR5F94w_a",
       "type": "text",
-      "x": -758.4603077439456,
-      "y": 387.28917380326374,
+      "x": -422.36900140382545,
+      "y": 407.54593713762273,
       "width": 111.5198974609375,
       "height": 20,
       "angle": 0,
@@ -2037,11 +1992,11 @@
       "index": "b19G",
       "roundness": null,
       "seed": 1500574760,
-      "version": 37,
-      "versionNonce": 1868890456,
+      "version": 325,
+      "versionNonce": 1459552296,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778234799000,
+      "updated": 1778237633933,
       "link": null,
       "locked": false,
       "text": "Elastic Search",
@@ -2057,10 +2012,10 @@
     {
       "id": "e5cChBYAKw9_g4rlNZ7tv",
       "type": "arrow",
-      "x": -1098.3919732424806,
-      "y": 405.9157153708738,
-      "width": 289.6062252114082,
-      "height": 4.576087074738666,
+      "x": -1098.5218929096573,
+      "y": 409.8882804244646,
+      "width": 625.479570053666,
+      "height": 8.571899505886904,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2074,11 +2029,11 @@
       "index": "b1B",
       "roundness": null,
       "seed": 855868456,
-      "version": 167,
-      "versionNonce": 1321059928,
+      "version": 455,
+      "versionNonce": 1383906088,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1778234996822,
+      "updated": 1778237633934,
       "link": null,
       "locked": false,
       "points": [
@@ -2087,8 +2042,8 @@
           0
         ],
         [
-          289.6062252114082,
-          -4.576087074738666
+          625.479570053666,
+          8.571899505886904
         ]
       ],
       "lastCommittedPoint": null,
@@ -2146,10 +2101,10 @@
     {
       "id": "l11X39wUtQivyhT-m-H_P",
       "type": "arrow",
-      "x": -725.9076567676002,
-      "y": 435.2636387496986,
-      "width": 53.76918695171889,
-      "height": 139.36598249808463,
+      "x": -435.03690242653727,
+      "y": 451.8540400621492,
+      "width": 121.4318453220393,
+      "height": 160.94649953297682,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2163,8 +2118,8 @@
       "index": "b1D",
       "roundness": null,
       "seed": 1303076952,
-      "version": 181,
-      "versionNonce": 1636454696,
+      "version": 499,
+      "versionNonce": 474997800,
       "isDeleted": false,
       "boundElements": [
         {
@@ -2172,7 +2127,7 @@
           "id": "ysbPlFikpHmmhlfJUptRY"
         }
       ],
-      "updated": 1778234834244,
+      "updated": 1778237640983,
       "link": null,
       "locked": false,
       "points": [
@@ -2181,8 +2136,8 @@
           0
         ],
         [
-          53.76918695171889,
-          139.36598249808463
+          -121.4318453220393,
+          160.94649953297682
         ]
       ],
       "lastCommittedPoint": null,
@@ -2236,6 +2191,258 @@
       "originalText": "CDC",
       "autoResize": true,
       "lineHeight": 1.25
+    },
+    {
+      "id": "BdMNJmrOalZCMFCB6iJ2D",
+      "type": "arrow",
+      "x": -1096.9075594312792,
+      "y": 429.58382444965815,
+      "width": 357.6209488050042,
+      "height": 155.29521839318164,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1G",
+      "roundness": null,
+      "seed": 798756952,
+      "version": 101,
+      "versionNonce": 68230952,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778237640983,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          357.6209488050042,
+          155.29521839318164
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "8XPrMwf9Pq8ePsl735pht",
+        "focus": -0.31972946535704255,
+        "gap": 3.9963201384273135
+      },
+      "endBinding": {
+        "elementId": "56FlMNDg49rxV8bc8RlpR",
+        "focus": 0.34669926729571343,
+        "gap": 5.182095082545011
+      },
+      "startArrowhead": "arrow",
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "DZpBEE7v0DxMxY_2Y5PZF",
+      "type": "text",
+      "x": -941.2940040658043,
+      "y": 463.80198460187245,
+      "width": 216.0598602294922,
+      "height": 75,
+      "angle": 0.44957078241042225,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1H",
+      "roundness": null,
+      "seed": 1993660504,
+      "version": 572,
+      "versionNonce": 28719704,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778237623663,
+      "link": null,
+      "locked": false,
+      "text": "SELECT * FROM DB \nWhere type in [] AND \nname LIKE '%term'",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "SELECT * FROM DB \nWhere type in [] AND \nname LIKE '%term'",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "j8RG_UEFoiOWqKbw565Lw",
+      "type": "text",
+      "x": -2027.3777257763818,
+      "y": 1346.2197522970196,
+      "width": 1362.739013671875,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1K",
+      "roundness": null,
+      "seed": 14513752,
+      "version": 259,
+      "versionNonce": 597643864,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778238300545,
+      "link": null,
+      "locked": false,
+      "text": "- select * query is slow because of the wildcards(%) we need to scan the entire database \n- in interview say like in HLD im leaving it like this and i might come back to this and optimize this once i satisfy my Functional requirements",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "- select * query is slow because of the wildcards(%) we need to scan the entire database \n- in interview say like in HLD im leaving it like this and i might come back to this and optimize this once i satisfy my Functional requirements",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "E5PeDyWMBu2phva5Z14w2",
+      "type": "text",
+      "x": -939.9988145943003,
+      "y": 1126.058265172488,
+      "width": 155.25990295410156,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1P",
+      "roundness": null,
+      "seed": 1173212200,
+      "version": 16,
+      "versionNonce": 2019746088,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778244346178,
+      "link": null,
+      "locked": false,
+      "text": "Weebhook event",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Weebhook event",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ncXnejKjHHimfvRP3GgNQ",
+      "type": "text",
+      "x": -868.64941698796,
+      "y": 841.4222461563714,
+      "width": 141.4398956298828,
+      "height": 25,
+      "angle": 5.478240746612039,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1Q",
+      "roundness": null,
+      "seed": 1767747416,
+      "version": 316,
+      "versionNonce": 1963938344,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778244380743,
+      "link": null,
+      "locked": false,
+      "text": "update status",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "update status",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "CQyi1Wbzvz_wZrGfsz-HH",
+      "type": "arrow",
+      "x": -1649.2547004291034,
+      "y": 734.816058766139,
+      "width": 608.7656407449283,
+      "height": 201.68665083114445,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1S",
+      "roundness": null,
+      "seed": 1154061144,
+      "version": 281,
+      "versionNonce": 1367001640,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1778245569141,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          608.7656407449283,
+          201.68665083114445
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "cu0RzyZCw-2BhdRx2jVHg",
+        "focus": 0.03925674586911068,
+        "gap": 2.100246857766251
+      },
+      "endBinding": {
+        "elementId": "54-ZrCj8ScWu0PJURZR0w",
+        "focus": 0.534116714354107,
+        "gap": 1.5843349468169663
+      },
+      "startArrowhead": "arrow",
+      "endArrowhead": "arrow",
+      "elbowed": false
     }
   ],
   "appState": {
