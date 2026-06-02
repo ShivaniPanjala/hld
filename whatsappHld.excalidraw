@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "avuNY3ftJrke6WeL84TRL",
+      "type": "text",
+      "x": -861.7221534442899,
+      "y": -549.3046875,
+      "width": 1122.4966590595243,
+      "height": 380,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 834611527,
+      "version": 734,
+      "versionNonce": 639602153,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1780405309436,
+      "link": null,
+      "locked": false,
+      "text": " Users should be able to send/receive media in their messages.\n1. Client requests to attach a file. The Chat Server returns a fileKey and a pre-signed upload URL.\n2. Client uploads the image directly to Blob Storage using the pre-signed URL.\n3. Blob Storage returns a successful upload response (e.g., HTTP 200/204).\n4. Client sends a sendMessage request to the Chat Server containing the fileKey (and optional text message).\n5. Chat Server stores the message in the Message table, including the attachmentKey/fileKey as metadata.\n6. Chat Server looks up all participants in the chat using the chatId from the ChatParticipant table.\n7. Chat Server creates an Inbox entry (recipientUserId, messageId) for each recipient.\n8. If recipients are online, Chat Server sends a newMessage event containing:\n       - messageId\n       - text\n       - attachmentKey/fileKey\n9. Recipients receive the message and send an ACK for message delivery (not for image download).\n10. Upon receiving the ACK, Chat Server deletes the corresponding Inbox entry for that recipient.\n11. When a recipient wants to view the image:\n        - Recipient sends the fileKey to Chat Server.\n        - Chat Server verifies access permissions.\n        - Chat Server returns a pre-signed download URL.\n        - Recipient downloads the image directly from Blob Storage.",
+      "fontSize": 16,
+      "fontFamily": 8,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": " Users should be able to send/receive media in their messages.\n1. Client requests to attach a file. The Chat Server returns a fileKey and a pre-signed upload URL.\n2. Client uploads the image directly to Blob Storage using the pre-signed URL.\n3. Blob Storage returns a successful upload response (e.g., HTTP 200/204).\n4. Client sends a sendMessage request to the Chat Server containing the fileKey (and optional text message).\n5. Chat Server stores the message in the Message table, including the attachmentKey/fileKey as metadata.\n6. Chat Server looks up all participants in the chat using the chatId from the ChatParticipant table.\n7. Chat Server creates an Inbox entry (recipientUserId, messageId) for each recipient.\n8. If recipients are online, Chat Server sends a newMessage event containing:\n       - messageId\n       - text\n       - attachmentKey/fileKey\n9. Recipients receive the message and send an ACK for message delivery (not for image download).\n10. Upon receiving the ACK, Chat Server deletes the corresponding Inbox entry for that recipient.\n11. When a recipient wants to view the image:\n        - Recipient sends the fileKey to Chat Server.\n        - Chat Server verifies access permissions.\n        - Chat Server returns a pre-signed download URL.\n        - Recipient downloads the image directly from Blob Storage.",
+      "autoResize": false,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
